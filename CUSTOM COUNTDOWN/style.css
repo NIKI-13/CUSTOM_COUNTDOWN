@@ -1,0 +1,215 @@
+/* THIS IS FOR THE GOOGLE FONT Prompt */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;500&display=swap');
+
+
+/* THIS STRETCHES THE PADDING & PREVENTS THE PAGE FROM CREATING A HORIZONTAL SCROLL BAR */
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    font-family: Prompt,sans-serif;
+}
+
+/* VIDEO BACKGROUND */
+.video_background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(37, 5, 109, 0.30);
+}
+
+/* CONTAINER */
+.container {
+  min-width: 600px;
+  min-height: 310px;
+  color: rgb(154, 165, 225);
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 25px 50px;
+  border-radius: 5px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(37, 5, 109, 0.50);
+}
+
+.input-container {
+  position: relative;
+  top: 20px;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* FORM */
+.form {
+  width: 480px;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+input {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  outline: none;
+  font-family: Prompt,sans-serif;
+  font-size: 17px;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 15px;
+  border: none;
+  text-transform: uppercase;
+  background: #261e4b;
+  color: rgb(154, 165, 225); 
+  font-family: Prompt,sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover{
+  filter: brightness(115%);
+}
+
+
+/* COUNTDOWN */
+ul {
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* COMPLETE */
+.complete {
+  position: relative;
+  top: 60px;
+}
+
+.complete-title{
+  animation: complete 4s infinite;
+}
+
+@keyframes complete{
+  0%{
+    color: rgb(17, 0, 172);
+  }
+
+  25%{
+    color: rgb(213, 255, 24);
+  }
+
+  50%{
+    color: rgb(196, 0, 0);
+    transform: scale(1.5);
+  }
+
+  75%{
+    color: rgb(116, 255, 10);
+  }
+
+  100%{
+    color: rgb(160, 0, 152);
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .video_background {
+   height: 100vh;
+   width: 100vw;
+  }
+  
+  video {
+    object-fit: cover;
+    object-position: 60%;
+    margin-top: -1px;
+  }
+
+  .container {
+    min-width: unset;
+    width: 95vw;
+    min-height: 245px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .input-container {
+    top: unset;
+  }
+
+  .countdown {
+    position: relative;
+    top: 10px;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  li span {
+    font-size: 40px;
+  }
+}
